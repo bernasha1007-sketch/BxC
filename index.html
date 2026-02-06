@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <!-- CDN Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.6.0/confetti.browser.min.js"></script>
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="css/style.css"> 
+    <!-- Icon -->
+    <link rel="Icon" href="images/teddy-bear.png" type="images/png">
+</head>
+<body>
+    <div class="hearts"></div>
+    <div class="container">
+        <!-- Step 1 -->
+        <div class="step active" id="step1">
+            <img src="images/stitch-step3.gif" alt="Stitch Love" class="bear-img">
+            <h1>Da du eine Fussballexpertin bist, welche Mannschaft magst du mehr?</h1>
+            <div class="buttons">
+                <button class="btn btn-yes" onclick="goToStep2()">FC Barcelona ❤️</button>
+                <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)">Real Madrid</button>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step" id="step2">
+            <img src="images/stitch-triste.gif" alt="Stitch" class="bear-img">
+            <h1>Du bist die beste, ich wusste du entscheidest dich richtig. Yane auch ein kahxwa trinken statt ein kave? 😘</h1>
+            <div class="buttons">
+                <button class="btn btn-yes" onclick="goToStep3()">Ja, natürlich ❤️❤️</button>
+                <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)">Geh alleine</button>
+            </div>
+        </div>
+
+        <!-- Step 3 (neu) -->
+        <div class="step" id="step3">
+            <img src="images/stitch-nerv.gif" alt="Stitch" class="bear-img">
+            <h1>Ich versuche dich auf jede Art zu nerven, sogar auf diese Weise & ich werde noch weitere Wege finden 😘 Ich weiß dein Blut kocht gerade, wie meins jedentag wegen dir 📈 Warscheinlich sagt dein Inneres gerade:</h1>
+            <div class="buttons">
+                <button class="btn btn-yes" onclick="goToStep4()">Du bist der Beste ❤️</button>
+                <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)">Ich will dich schlagen</button>
+            </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step" id="step4">
+            <img src="images/stitch-frage.gif" alt="Stitch" class="bear-img">
+            <h1>Aber kommen wir nun zur Frage, die wir immernoch nicht geklärt haben.</h1>
+            <div class="buttons">
+                <button class="btn btn-yes" onclick="goToStep5()">Weiter</button>
+            </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="step" id="step5">
+            <img src="images/stitch-beijo.gif" alt="Stitch Beijo" class="bear-img">
+            <h1>Was wünscht du dir zum Geburtstag?</h1>
+            <div class="buttons">
+                <button class="btn btn-yes" onclick="goToStep6()">Ein Döner</button>
+                <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)">Kilian Parfum, YSL, LV</button>
+            </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="step" id="step6">
+            <img src="images/stitch-pet.gif" alt="Stitch Pet" class="bear-img">
+            <h1>Echt? Tmm, wollte schon bestellen. Vertrau ein Döner mit einem Eistee schmeckt besser als ein Schluck Kilian Parfum und LV Leder. Für dich nur das beste.</h1>
+            <div class="buttons">
+                <button class="btn btn-yes" onclick="goToStep7()">Ja, du hast Recht ❤️</button>
+            </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="step" id="step7">
+            <img src="images/stitch-fries.gif" alt="Stitch Fries" class="bear-img">
+            <h1>Kommen wir nun zur wichtigsten Frage, da wir alles geklärt haben</h1>
+            <div class="buttons">
+                <button class="btn btn-yes" onclick="goToStep8()">Ja?</button>
+                <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)">ICH WILL MEINE LV BAG</button>
+            </div>
+        </div>
+
+        <!-- Step 8 -->
+        <div class="step" id="step8">
+            <img src="images/stitch-love.gif" alt="Stitch Love" class="bear-img">
+            <h1>Barfin Would You Be My Valentine? 💝</h1>
+            <div class="buttons">
+                <button class="btn btn-yes" onclick="finalStep()">Yes</button>
+            </div>
+        </div>
+
+        <!-- Final Message -->
+        <div class="final-message">
+            <img src="images/dudu-twisting-dance.gif" alt="Cute Bear in Love" class="bear-img">
+            <p>Ich freu mich schon 🥰</p>
+            <p style="margin-top: 15px;">Uhrzeit und alle Infos kriegst du noch!</p>
+        </div>
+        
+        <button class="btn btn-yes end-btn" onclick="canClose = true; if(document.fullscreenElement) document.exitFullscreen(); window.close();">END</button>        
+    </div>
+
+    <!-- Script JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
