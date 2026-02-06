@@ -30,7 +30,7 @@
             <h1>Du bist die beste, ich wusste du entscheidest dich richtig. Yane auch ein kahxwa trinken statt ein kave? 😘</h1>
             <div class="buttons">
                 <button class="btn btn-yes" onclick="goToStep3()">Ja, natürlich ❤️❤️</button>
-                <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)">Geh alleine</button>
+                <button class="btn btn-no" onmouseover="flyBehindGif(this)" onclick="flyBehindGif(this)">Geh alleine</button>
             </div>
         </div>
 
@@ -39,8 +39,8 @@
             <img src="images/stitch-nerv.gif" alt="Stitch" class="bear-img">
             <h1>Ich versuche dich auf jede Art zu nerven, sogar auf diese Weise & ich werde noch weitere Wege finden 😘 Ich weiß dein Blut kocht gerade, wie meins jedentag wegen dir 📈 Warscheinlich sagt dein Inneres gerade:</h1>
             <div class="buttons">
-                <button class="btn btn-yes" onclick="goToStep4()">Du bist der Beste ❤️</button>
-                <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)">Ich will dich schlagen</button>
+                <button class="btn btn-yes" onclick="goToStep4()" style="position: relative; z-index: 5;">Du bist der Beste ❤️</button>
+                <button class="btn btn-no" onmouseover="hideBehindYes(this)" onclick="hideBehindYes(this)" style="transition: all 0.5s ease-in-out;">Ich will dich schlagen</button>
             </div>
         </div>
 
@@ -57,9 +57,9 @@
         <div class="step" id="step5">
             <img src="images/stitch-beijo.gif" alt="Stitch Beijo" class="bear-img">
             <h1>Was wünscht du dir zum Geburtstag?</h1>
-            <div class="buttons">
-                <button class="btn btn-yes" onclick="goToStep6()">Ein Döner</button>
-                <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)">Kilian Parfum, YSL, LV</button>
+            <div class="buttons" style="overflow: hidden;">
+                <button class="btn btn-yes" onclick="goToStep6()" style="transition: transform 0.3s;">Ein Döner</button>
+                <button class="btn btn-no" onclick="pushButton(this)" style="transition: transform 0.4s;">Kilian Parfum, YSL, LV</button>
             </div>
         </div>
 
@@ -77,8 +77,8 @@
             <img src="images/stitch-fries.gif" alt="Stitch Fries" class="bear-img">
             <h1>Kommen wir nun zur wichtigsten Frage, da wir alles geklärt haben</h1>
             <div class="buttons">
-                <button class="btn btn-yes" onclick="goToStep8()">Ja?</button>
-                <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)">ICH WILL MEINE LV BAG</button>
+                <button class="btn btn-yes" onclick="goToStep8()" style="transition: transform 0.3s;">Ja?</button>
+                <button class="btn btn-no" onclick="marioStomp()" style="transition: transform 0.3s;">ICH WILL MEINE LV BAG</button>
             </div>
         </div>
 
@@ -86,8 +86,9 @@
         <div class="step" id="step8">
             <img src="images/stitch-love.gif" alt="Stitch Love" class="bear-img">
             <h1>Barfin Would You Be My Valentine? 💝</h1>
-            <div class="buttons">
-                <button class="btn btn-yes" onclick="finalStep()">Yes</button>
+            <div class="buttons" style="position: relative;">
+                <button class="btn btn-yes grow-btn" onclick="finalStep()" style="position: relative; z-index: 2; transition: transform 0.3s;">Yes</button>
+                <button class="btn btn-no" onclick="growYesButton()" style="position: relative; z-index: 1;">Nein, danke</button>
             </div>
         </div>
 
